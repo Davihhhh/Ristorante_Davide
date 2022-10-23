@@ -649,8 +649,12 @@ namespace Ristorante_Davide
                 FileStream filename2 = new FileStream(path2, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
               
                 StreamReader sr1 = new StreamReader(filename);
+                StreamReader sr2 = new StreamReader(filename2);
                 
+                StreamWriter sw1 = new StreamWriter(filename);
+                sw1.AutoFlush = true;
                 StreamWriter sw2 = new StreamWriter(filename2);
+                sw2.AutoFlush = true;
 
                 string copy = "";
                 int contsr = 0;
